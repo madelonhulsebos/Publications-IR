@@ -1,6 +1,6 @@
 # Publications-IR
 
-## Prerequistes
+## Prerequiste
 
 Installing [Node.js and NPM](https://nodejs.org/en/download/)
 
