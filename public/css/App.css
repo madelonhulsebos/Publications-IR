@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  background-color: lightblue;
+  height: 150px;
+  padding: 5px;
+  color: white;
+}
