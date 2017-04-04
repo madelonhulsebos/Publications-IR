@@ -47,7 +47,7 @@ for pub in pubs:
 
 # Search method to find paragraph of publications that mention a method
 def search(term):
-    q2 = es.search(index="mm", body={"_source":["content.chapters.paragraphs"], "query": {"match_phrase":{"content.chapters.paragraphs": str(term)}}, "size": 1000})
+    q2 = es.search(index="mm", body={"_source":["content.chapters.paragraphs"], "query": {"match_phrase":{"content.chapters.paragraphs": str(term)}}, "size": 1000}) 
 	return q2['hits']['hits']
 
 es.indices.create(index=‘mm', ignore=400)
@@ -87,9 +87,8 @@ for algparagraph in algparagraphs:
 		for algorithm in algorithmlist:
 			stringsentence = str(sentence)
 			if algorithm in stringsentence:
+				print(algorithm)
+				print(sentence)
 				wr.writerow([stringsentence])
 
 	
-
-
-
