@@ -14,8 +14,8 @@ import requests
 from elasticsearch import Elasticsearch
 
 # Initialise ElasticSearch
-res = requests.get('http://localhost:9200')
-es = Elasticsearch([{'host': 'localhost', 'port': 9200}])	
+res = requests.get('http://0.0.0.0:9200')
+es = Elasticsearch([{'host': '0.0.0.0', 'port': 9200}])	
 
 app = Flask(__name__)
 
@@ -235,4 +235,4 @@ def document_page(doc_title):
 		pprint.pprint(Exception)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
